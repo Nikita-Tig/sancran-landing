@@ -1,0 +1,79 @@
+@import './fonts/fonts.css';
+
+/* semantic color variables for this project */
+:root {
+  --color-background-main: #fff;
+  --color-background: #5e88e3;
+  --color-background-soft: #40a0d8;
+  --color-background-accent: #e16d18;
+
+  --color-border: var(--color-background-accent);
+
+  /* Fonts colors */
+  --color-text: #000000;
+  --color-text-accent: #e16d18;
+
+  /* Fonts families */
+  --font-main-family: 'Urbanist', sans-serif;
+  --font-accent-family: 'Rubik', sans-serif;
+
+  /* Fonts weights */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+
+  /* Fonts sizes */
+  --font-size-xs: 16px;
+  --font-size-s: 20px;
+  --font-size-m: 24px;
+  --font-size-l: 32px;
+  --font-size-xl: 40px;
+
+  /* Fonts line height */
+  --font-line-m: 1.6;
+
+  /* Fonts rules */
+  --font-caption: var(--font-regular) var(--font-size-xs) / var(--font-line-m)
+    var(--font-main-family);
+  --font-body: var(--font-regular) var(--font-size-s) / var(--font-line-m) var(--font-main-family);
+  --font-h4: var(--font-medium) var(--font-size-m) / var(--font-line-m) var(--font-main-family);
+  --font-h3: var(--font-medium) var(--font-size-m) / var(--font-line-m) var(--font-main-family);
+  --font-h2: var(--font-medium) var(--font-size-l) / var(--font-line-m) var(--font-accent-family);
+  --font-h1: var(--font-medium) var(--font-size-xl) / var(--font-line-m) var(--font-accent-family);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-accent: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background-main);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

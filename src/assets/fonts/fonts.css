@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Rubik';
+  src:
+    local('Rubik'),
+    url('./Rubik-VariableFont_wght.ttf') format('truetype supports variations'),
+    url('./Rubik-VariableFont_wght.ttf') format('truetype-variations');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src:
+    local('Rubik'),
+    url('./Rubik-Italic-VariableFont_wght.ttf') format('truetype supports variations'),
+    url('./Rubik-Italic-VariableFont_wght.ttf') format('truetype-variations');
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src:
+    local('Urbanist'),
+    url('./Urbanist-VariableFont_wght.ttf') format('truetype supports variations'),
+    url('./Urbanist-VariableFont_wght.ttf') format('truetype-variations');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src:
+    local('Urbanist'),
+    url('./Urbanist-Italic-VariableFont_wght.ttf') format('truetype supports variations'),
+    url('./Urbanist-Italic-VariableFont_wght.ttf') format('truetype-variations');
+  font-display: swap;
+  font-style: italic;
+}
