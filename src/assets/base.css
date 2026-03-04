@@ -6,12 +6,15 @@
   --color-background: #5e88e3;
   --color-background-soft: #40a0d8;
   --color-background-accent: #e16d18;
+  --color-background-accent-mute: #c35c12;
+  --color-background-accent-soft: #e26b16;
 
   --color-border: var(--color-background-accent);
+  --color-separator: #fff;
 
   /* Fonts colors */
   --color-text: #000000;
-  --color-text-accent: #e16d18;
+  --color-text-accent: #e26b16;
 
   /* Fonts families */
   --font-main-family: 'Urbanist', sans-serif;
@@ -23,11 +26,11 @@
   --font-semibold: 600;
 
   /* Fonts sizes */
-  --font-size-xs: 16px;
-  --font-size-s: 20px;
-  --font-size-m: 24px;
-  --font-size-l: 32px;
-  --font-size-xl: 40px;
+  --font-size-xs: 12px;
+  --font-size-s: 16px;
+  --font-size-m: 20px;
+  --font-size-l: 26px;
+  --font-size-xl: 32px;
 
   /* Fonts line height */
   --font-line-m: 1.6;
@@ -42,17 +45,31 @@
   --font-h1: var(--font-medium) var(--font-size-xl) / var(--font-line-m) var(--font-accent-family);
 }
 
+@media (min-width: 1024px) {
+  :root {
+    --font-size-xs: 16px;
+    --font-size-s: 20px;
+    --font-size-m: 24px;
+    --font-size-l: 32px;
+    --font-size-xl: 40px;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-accent: var(--vt-c-black-mute);
+    --color-background-main: #4c4c4c;
+    --color-background: #0b3ca5;
+    --color-background-soft: #0076bb;
+    --color-background-accent: #cd5600;
+    --color-background-accent-mute: #ac4800;
+    --color-background-accent-soft: #e15e00;
 
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
+    --color-border: var(--color-background-accent);
+    --color-separator: #ffffff;
 
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
+    /* Fonts colors */
+    --color-text: #ffffff;
+    --color-text-accent: #e15e00;
   }
 }
 
@@ -66,6 +83,7 @@
 
 body {
   min-height: 100vh;
+  min-width: 325px;
   color: var(--color-text);
   background: var(--color-background-main);
   transition:

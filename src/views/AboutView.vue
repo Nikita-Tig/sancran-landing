@@ -1,7 +1,13 @@
+<script setup lang="ts">
+import TheAbout from '@/components/TheAbout.vue'
+import TheReviews from '@/components/TheReviews.vue'
+</script>
+
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <main>
+    <TheAbout />
+    <TheReviews />
+  </main>
 </template>
 
 <style>
