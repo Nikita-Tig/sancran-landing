@@ -5,6 +5,7 @@ import logoDark from '@/assets/images/logoDark.svg'
 import ContactButton from './components/shared/ContactButton.vue'
 import ModalComponent from './components/shared/ModalComponent.vue'
 import { provide, ref } from 'vue'
+import IconMapPin from './assets/icons/IconMapPin.vue'
 
 const showModal = ref(false)
 
@@ -71,7 +72,12 @@ provide('openModal', openModal)
       </template>
     </ModalComponent>
   </Transition>
-  <footer>helo :3</footer>
+  <footer>
+    <div class="address">
+      <IconMapPin />
+      <p>Нижегородская область, г. Бор</p>
+    </div>
+  </footer>
 </template>
 
 <style scoped>
@@ -139,8 +145,14 @@ h3 {
 }
 
 footer {
+  display: flex;
   background-color: var(--color-background);
   padding: 4px 8px;
+}
+
+.address {
+  display: flex;
+  gap: 8px;
 }
 
 @media (min-width: 1024px) {

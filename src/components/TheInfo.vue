@@ -9,7 +9,7 @@ import ItemComponent from './shared/ItemComponent.vue'
     <template #subHeading>Основные характеристики автокрана</template>
     <template #default>
       <ul>
-        <li>Вылет стрелы: 31 метров</li>
+        <li>Вылет стрелы: 31 метр</li>
         <li>Грузоподъемность: 25 тонн</li>
         <li>Минимальное время для заказа: 4 часа</li>
       </ul>

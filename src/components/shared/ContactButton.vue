@@ -10,15 +10,14 @@ const openModal = inject<func>('openModal', () => {})
 
 <style scoped>
 .button {
-  max-width: 300px;
   padding: 8px;
   font: var(--font-h2);
 }
 
 @media (min-width: 1024px) {
   .button {
-    width: 300px;
-    padding: 16px;
+    width: 260px;
+    padding: 12px;
     font: var(--font-h2);
   }
 }
