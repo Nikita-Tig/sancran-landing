@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import CardComponent from './shared/CardComponent.vue'
+import craneHangarPhoto from '../assets/images/craneHangar.png'
+import craneHouse from '../assets/images/craneHouse.png'
+import craneWoodHouse from '../assets/images/craneWoodHouse.png'
+import craneWoodWork from '../assets/images/craneWoodWork.png'
 
 type review = {
   img: string
@@ -11,25 +15,25 @@ type review = {
 
 const reviews: review[] = [
   {
-    img: 'src/assets/images/craneHangar.png',
+    img: craneHangarPhoto,
     heading: 'Профессионалы',
     content: 'Выполнили непростую работу на высшем уровне',
     id: 0,
   },
   {
-    img: 'src/assets/images/craneHouse.png',
+    img: craneHouse,
     heading: 'Пунктуальность',
     content: 'Приехали вовремя и быстро были готовы выполнять работу',
     id: 1,
   },
   {
-    img: 'src/assets/images/craneWoodHouse.png',
+    img: craneWoodHouse,
     heading: 'Доступность',
     content: 'Готовы приехать в любое назначенное время',
     id: 2,
   },
   {
-    img: 'src/assets/images/craneWoodWork.png',
+    img: craneWoodWork,
     heading: 'Цена-качество',
     content: 'Цены соответствуют качеству услуг',
     id: 3,
