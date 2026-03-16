@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import TheAbout from '@/components/TheAbout.vue'
+import TheGallery from '@/components/TheGallery.vue'
 import TheReviews from '@/components/TheReviews.vue'
 </script>
 
@@ -7,6 +8,7 @@ import TheReviews from '@/components/TheReviews.vue'
   <main>
     <TheAbout />
     <TheReviews />
+    <TheGallery />
   </main>
 </template>
 

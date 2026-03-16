@@ -1,41 +1,31 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import CardComponent from './shared/CardComponent.vue'
-import craneHangarPhoto from '../assets/images/reviews/craneHangar.png'
-import craneHouse from '../assets/images/reviews/craneHouse.png'
-import craneWoodHouse from '../assets/images/reviews/craneWoodHouse.png'
-import craneWoodWork from '../assets/images/reviews/craneWoodWork.png'
+import machinery0 from '../assets/images/gallery/machinery0.png'
+import machinery1 from '../assets/images/gallery/machinery1.png'
+import machinery2 from '../assets/images/gallery/machinery2.png'
+import machinery3 from '../assets/images/gallery/machinery3.png'
 
-type review = {
+type photo = {
   img: string
-  heading: string
-  content: string
   id: number
 }
 
-const reviews: review[] = [
+const photos: photo[] = [
   {
-    img: craneHangarPhoto,
-    heading: 'Профессионалы',
-    content: 'Выполнили непростую работу на высшем уровне',
+    img: machinery0,
     id: 0,
   },
   {
-    img: craneHouse,
-    heading: 'Пунктуальность',
-    content: 'Приехали вовремя и быстро были готовы выполнять работу',
+    img: machinery1,
     id: 1,
   },
   {
-    img: craneWoodHouse,
-    heading: 'Доступность',
-    content: 'Готовы приехать в любое назначенное время',
+    img: machinery2,
     id: 2,
   },
   {
-    img: craneWoodWork,
-    heading: 'Цена-качество',
-    content: 'Цены соответствуют качеству услуг',
+    img: machinery3,
     id: 3,
   },
 ]
@@ -55,11 +45,11 @@ onMounted(() => {
 
 const cardsToShow = computed(() => {
   count = isMobile.value ? 1 : 3
-  return reviews.slice(index.value, index.value + count)
+  return photos.slice(index.value, index.value + count)
 })
 
 function next() {
-  if (index.value + count < reviews.length) {
+  if (index.value + count < photos.length) {
     index.value++
   } else {
     index.value = 0
@@ -70,19 +60,17 @@ function prev() {
   if (index.value > 0) {
     index.value--
   } else {
-    index.value = reviews.length - count
+    index.value = photos.length - count
   }
 }
 </script>
 
 <template>
-  <div class="reviews">
-    <h3>Что о нас говорят</h3>
+  <div class="gallery">
+    <h3>Галерея наших работ</h3>
     <div class="cards">
       <CardComponent v-for="card in cardsToShow" v-bind:key="card.id">
         <template #img><img :src="card.img" /></template>
-        <template #heading>{{ card.heading }}</template>
-        <template #default>{{ card.content }}</template>
       </CardComponent>
     </div>
     <div class="buttons">
@@ -93,7 +81,7 @@ function prev() {
 </template>
 
 <style scoped>
-.reviews {
+.gallery {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -128,7 +116,7 @@ button {
 }
 
 @media (min-width: 1024px) {
-  .reviews {
+  .gallery {
     max-width: 1200px;
   }
 

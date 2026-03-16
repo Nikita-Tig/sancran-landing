@@ -28,7 +28,6 @@
   width: 100%;
   max-width: 1200px;
   min-width: 360px;
-  min-height: 660px;
   background: var(--color-background-soft);
 }
 
