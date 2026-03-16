@@ -1,6 +1,6 @@
 # crane-landing-website
 
-https://sancran.gt.tc/
+https://sancran.ru
 
 This is a website for a young auto crane company; its goal is to present to a new possible client what the company does provide and some technical info about the vehicle used and some info about the company itself with a couple of reviews.
 
